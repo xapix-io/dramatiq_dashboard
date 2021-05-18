@@ -58,7 +58,7 @@
                 </td>
                 <td class="table__actions">
                   {% call row("row--no-gap") %}
-                    {% if current_tab == "failed" %}
+                    {% if current_tab != "standard" %}
                       {% call column() %}
                         {{ action("Requeue", make_uri("requeue-message"), {
                           "id": job.message_id,
